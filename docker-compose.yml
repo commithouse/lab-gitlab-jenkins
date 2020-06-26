@@ -1,0 +1,24 @@
+#cria um container do jenkins e outro do grafana
+version: '2'
+services:
+    jenkins:
+      image: jenkins/jenkins
+      container_name: jenkins
+      hostname: jenkins
+      network_mode: bridge
+      ports:
+        - "85:8080"
+      #volumes:
+      #  - ~/jenkins_home:/var/jenkins_home
+     gitlab:
+        image: gitlab/gitlab-ce
+        container_name: gitlab
+        hostname: gitlab
+        restart: always
+        network_mode: bridge
+        ports:
+           - "80:80"
+       # volumes:
+       #   - ~/gitlab/config:/etc/gitlab
+       #   - ~/gitlab/logs:/var/log/gitlab
+       #   - ~/gitlab/data:/var/opt/gitlab
