@@ -1,7 +1,6 @@
-version: '2'
- 
+#lab docker gilab e jenkins
+version: "3"
 services:
-    jenkins:
     jenkins:
       image: jenkins/jenkins
       container_name: jenkins
