@@ -1,6 +1,7 @@
-#cria um container do jenkins e outro do grafana
 version: '2'
-  services:
+ 
+services:
+    jenkins:
     jenkins:
       image: jenkins/jenkins
       container_name: jenkins
